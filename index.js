@@ -3,6 +3,7 @@ const mongoose = require('mongoose'); // Library to handle database template con
 const cookieSession = require('cookie-session'); // Used to encrypt the oauth cookies
 const passport = require('passport');
 const keys = require('./config/keys');
+const path = require('path'); // Default module from Express, direct links got Internal Server Error without
 require('./models/User');
 require('./services/passport');
 
