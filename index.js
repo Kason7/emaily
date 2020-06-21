@@ -7,6 +7,10 @@ require('./models/User');
 require('./services/passport');
 
 // Connecting to Database using Mongoose
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useFindAndModify', false);
+mongoose.set('useCreateIndex', true);
+mongoose.set('useUnifiedTopology', true);
 mongoose.connect(keys.mongoURI);
 
 // Defining underlying express as app framework
